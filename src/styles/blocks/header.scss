@@ -1,12 +1,8 @@
 .header {
   background-size: cover;
-  background-image: url(../images/background_img_tablet.png);
+  box-sizing: border-box;
+  background-image: url(../images/background_img_desktop.png);
   background-position: right;
-
-  @include on-desktop {
-    background-image: url(../images/background_img_desktop.png);
-    background-position: center;
-  }
 
   &__content {
     height: 100vh;
@@ -16,19 +12,33 @@
   }
 
   &__title {
-    margin-bottom: 0;
     font-family: $font-family;
-    font-weight: 700;
+    font-weight: $font-size-bold;
     font-style: bold;
     font-size: 36px;
     letter-spacing: -1.5px;
     line-height: 100%;
+    margin-bottom: 0;
+    text-align: center;
+
+    @include on-tablet {
+      font-size: 64px;
+    }
+
+    @include on-desktop {
+      font-size: 80px;
+    }
   }
 
   &__bottom {
-    @include text-bottom-padding;
+    padding-bottom: 88px;
 
-    margin-left: auto;
-    margin-right: auto;
+    @include on-tablet {
+      padding-bottom: 130px;
+    }
+
+    @include on-desktop {
+      padding-bottom: 203px;
+    }
   }
 }
