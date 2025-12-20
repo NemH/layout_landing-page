@@ -1,4 +1,5 @@
 .product {
+  transition: all 300ms;
   &__photo {
     width: 100%;
   }
@@ -19,5 +20,13 @@
     font-size: 24px;
     line-height: 140%;
     font-weight: $font-size-bold;
+
+    @include on-desktop {
+      margin-top: auto;
+    }
+  }
+
+  &:hover {
+    @include hover(transform, scale(1.05));
   }
 }

@@ -20,6 +20,7 @@
 
   &__logo {
     height: 38px;
+    image-rendering: auto;
 
     @include hover(transform, scale(1.2));
 

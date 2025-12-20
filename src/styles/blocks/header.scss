@@ -1,8 +1,13 @@
 .header {
   background-size: cover;
   box-sizing: border-box;
-  background-image: url(../images/background_img_desktop.png);
+  background-image: url(../images/background_img_tablet.png);
   background-position: right;
+
+  @include on-desktop {
+    background-image: url(../images/background_img_desktop.png);
+    background-position: center;
+  }
 
   &__content {
     height: 100vh;
