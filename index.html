@@ -28,10 +28,19 @@
       rel="stylesheet"
       href="src/styles/main.scss"
     />
-    <script
-      src="main.js"
-      defer
-    ></script>
+    <script defer>
+      const page = document.querySelector('.page');
+      const overFlowMenu = document.querySelector('.icon--menu');
+      const overFlowMenuClose = document.querySelector('.icon--close');
+
+      overFlowMenu.addEventListener('click', () => {
+        page.classList.add('page__menu--open');
+      });
+
+      overFlowMenuClose.addEventListener('click', () => {
+        page.classList.remove('page__menu--open');
+      });
+    </script>
   </head>
   <body class="page__body">
     <header class="header">
