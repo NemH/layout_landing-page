@@ -1,6 +1,6 @@
 'use strict';
 
-const page = document.querySelector('.page');
+const page = document.querySelector('.page__body');
 const overFlowMenu = document.querySelector('.icon--menu');
 const overFlowMenuClose = document.querySelector('.icon--close');
 
